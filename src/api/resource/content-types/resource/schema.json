@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resources",
+  "info": {
+    "singularName": "resource",
+    "pluralName": "resources",
+    "displayName": "Resource"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "mainBody": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "publishedDate": {
+      "type": "datetime"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "content": {
+      "type": "enumeration",
+      "enum": [
+        "tutorial",
+        "case-study",
+        "news",
+        "guide",
+        "whitepaper"
+      ]
+    },
+    "tags": {
+      "type": "json"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    }
+  }
+}
